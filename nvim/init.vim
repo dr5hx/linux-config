@@ -377,3 +377,4 @@ func SetTitle()
 endfunc 
 autocmd BufNewFile * normal G
 set mouse=a
+set tags+=~/linux_config/nvim/systags
