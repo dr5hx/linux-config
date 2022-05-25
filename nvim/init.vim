@@ -1,16 +1,16 @@
-call plug#begin('~/.config/nvim/plugged')
-	Plug 'Yggdroot/indentLine'			" 缩进插件
-	Plug 'crusoexia/vim-monokai'			" neovim主题
-	Plug 'vim-airline/vim-airline'       
-	Plug 'vim-airline/vim-airline-themes' " airline 的主题
-	Plug 'scrooloose/nerdcommenter' " 注释工具
-	Plug 'luochen1990/rainbow'
-	Plug 'preservim/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'majutsushi/tagbar'
-	Plug 'octol/vim-cpp-enhanced-highlight'
-	Plug 'honza/vim-snippets'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#begin('~/linux-config/nvim/plugged')
+    Plug 'Yggdroot/indentLine' " 缩进插件
+    Plug 'crusoexia/vim-monokai' " neovim主题
+    Plug 'vim-airline/vim-airline'       
+    Plug 'vim-airline/vim-airline-themes' " airline 的主题
+    Plug 'scrooloose/nerdcommenter' " 注释工具
+    Plug 'luochen1990/rainbow'
+    Plug 'preservim/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'majutsushi/tagbar'
+    Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'honza/vim-snippets'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
