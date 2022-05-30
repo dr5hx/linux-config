@@ -23,26 +23,27 @@ if which brew >/dev/null;then
     brew install vim ctags git astyle
 fi
 
-sudo easy_install -ZU autopep8 
+#sudo easy_install -ZU autopep8 
 sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
 rm -rf ~/vim* 2>&1 >/dev/null
 rm -rf ~/.vim* 2>&1 >/dev/null
 mv -f ~/vim ~/vim_old
-cd ~/ && git clone https://gitee.com/suyelu/vim.git
+cd ~/ && git clone https://github.com/ma6174/vim
 mv -f ~/.vim ~/.vim_old 2>&1 >/dev/null
 mv -f ~/vim ~/.vim 2>&1 >/dev/null
 mv -f ~/.vimrc ~/.vimrc_old 2>&1 >/dev/null
-mv -f ~/.vim/.vimrc ~/ 
-git clone https://gitee.com/suyelu/vundle.git ~/.vim/bundle/vundle
-echo "程序正在自动安装相应插件" > kaikeba
-echo "command-t插件需要等待时间较长，不要担心" >> kaikeba
-echo "建议你掏出手机拍下以下内容：" >> kaikeba
-echo "  经过多次测试，command-t插件最后可能会报错，但是实际上却安装上了；" >> kaikeba
-echo "你可以在安装完成后，执行\`vim\`命令，并直接输入:BundleInstall,回车，来重新开始安装。" >> kaikeba
-echo "你会发现，所有任务会瞬间完成。当然，如果真的没有安装成功，上面的命令也会重新安装未完成的插件。" >> kaikeba
-echo "安装完毕将自动退出" >> kaikeba
-echo "请耐心等待" >> kaikeba
-vim kaikeba -c "BundleInstall" -c "q" -c "q"
-rm kaikeba
+mv -f ~/.vim/ ~/ 
+ln -s ~/linux-config/vimrc .vimrc
+git clone https://github.com/gmarik/vundle.git  ~/.vim/bundle/vundle
+echo "程序正在自动安装相应插件" > vim_install
+echo "command-t插件需要等待时间较长，不要担心" >> vim_install
+echo "建议你掏出手机拍下以下内容：" >> vim_install
+echo "  经过多次测试，command-t插件最后可能会报错，但是实际上却安装上了；" >> vim_install
+echo "你可以在安装完成后，执行\`vim\`命令，并直接输入:BundleInstall,回车，来重新开始安装。" >> vim_install
+echo "你会发现，所有任务会瞬间完成。当然，如果真的没有安装成功，上面的命令也会重新安装未完成的插件。" >> vim_install
+echo "安装完毕将自动退出" >> vim_install
+echo "请耐心等待" >> vim_install
+vim vim_install -c "BundleInstall" -c "q" -c "q"
+rm vim_install
 echo "安装完成"
 

@@ -442,42 +442,42 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'https://gitee.com/suyelu/vundle'
+Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'https://gitee.com/suyelu/vim-fugitive'
-Bundle 'https://gitee.com/suyelu/sparkup', {'rtp': 'vim/'}
-Bundle 'https://gitee.com/suyelu/indentLine'
+Bundle 'tpope/vim-fugitive'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'Yggdroot/indentLine'
 let g:indentLine_char = '┊'
 "ndle 'tpope/vim-rails.git'
 " vim-scripts repos
-Bundle 'https://gitee.com/suyelu/L9'
-Bundle 'https://gitee.com/suyelu/FuzzyFinder'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 " non github repos
-Bundle 'https://gitee.com/suyelu/command-t'
-Bundle 'https://gitee.com/suyelu/Auto-Pairs'
-Bundle 'https://gitee.com/suyelu/python-imports.vim'
-Bundle 'https://gitee.com/suyelu/CaptureClipboard'
-Bundle 'https://gitee.com/suyelu/ctrlp-modified.vim'
-Bundle 'https://gitee.com/suyelu/last_edit_marker.vim'
-Bundle 'https://gitee.com/suyelu/synmark.vim'
+Bundle 'https://github.com/wincent/command-t.git'
+Bundle 'Auto-Pairs'
+Bundle 'python-imports.vim'
+Bundle 'CaptureClipboard'
+Bundle 'ctrlp-modified.vim'
+Bundle 'last_edit_marker.vim'
+Bundle 'synmark.vim'
 "Bundle 'Python-mode-klen'
-Bundle 'https://gitee.com/suyelu/SQLComplete.vim'
-Bundle 'https://gitee.com/suyelu/Javascript-OmniCompletion-with-YUI-and-j'
+Bundle 'SQLComplete.vim'
+Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
 "Bundle 'JavaScript-Indent'
 "Bundle 'Better-Javascript-Indentation'
-Bundle 'https://gitee.com/suyelu/jslint.vim'
-Bundle "https://gitee.com/suyelu/vim-javascript"
-Bundle 'https://gitee.com/suyelu/Vim-Script-Updater'
-Bundle 'https://gitee.com/suyelu/ctrlp.vim'
-Bundle 'https://gitee.com/suyelu/ctrlp-funky'
-Bundle 'https://gitee.com/suyelu/jsbeautify'
-Bundle 'https://gitee.com/suyelu/The-NERD-Commenter'
+Bundle 'jslint.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'Vim-Script-Updater'
+Bundle 'ctrlp.vim'
+Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'jsbeautify'
+Bundle 'The-NERD-Commenter'
 "django
-Bundle 'https://gitee.com/suyelu/django_templates.vim'
-Bundle 'https://gitee.com/suyelu/Django-Projects'
+Bundle 'django_templates.vim'
+Bundle 'Django-Projects'
 
 "Bundle 'FredKSchott/CoVim'
 "Bundle 'djangojump'
