@@ -29,7 +29,7 @@ rm -rf ~/.local/share/nvim/ 2>&1 >/dev/null
 mv -f ~/.nvim ~/.nvim_old
 rm -rf ~/.config/nvim/
 
-if !hash node 2>/dev/null; then
+if (hash node 2>/dev/null); then
     echo "install nvs for manage node"
     export NVS_HOME="$HOME/.nvs"
     git clone https://github.com/jasongin/nvs "$NVS_HOME"
