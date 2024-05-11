@@ -100,13 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/autojump/autojump.sh
 
-NVIM_HOME=~/nvim
-CLANGD_HOME=~/clangd
-export PATH=$NVIM_HOME/bin:$PATH
-export PATH=$CLANGD_HOME/bin:$PATH
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
