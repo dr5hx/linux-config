@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
+eval "$(vfox activate zsh)"

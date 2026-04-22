@@ -8,3 +8,5 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 ln -s ~/linux-config/ys.zsh-theme ~/.oh-my-zsh/themes/ys_my.zsh-theme
 rm -rf ~/.zshrc
 ln -s  ~/linux-config/zshrc ~/.zshrc
+
+exec zsh
