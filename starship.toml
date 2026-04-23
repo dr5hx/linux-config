@@ -1,4 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
+scan_timeout = 10000
 
 format = """
 [](red)\
@@ -6,7 +7,7 @@ $os\
 $username\
 [](bg:peach fg:red)\
 $directory\
-${custom.dir_tail}\
+[ ](fg:peach)\
 ([](bg:yellow fg:peach)\
 $git_branch\
 $git_status\
@@ -69,11 +70,6 @@ truncate_to_repo = false
 "Music" = "󰝚 "
 "Pictures" = " "
 "Developer" = "󰲋 "
-
-[custom.dir_tail]
-when = ''' ! git rev-parse --is-inside-work-tree >/dev/null 2>&1 '''
-command = "true"
-format = "[ ](fg:peach)"
 
 [git_branch]
 symbol = ""

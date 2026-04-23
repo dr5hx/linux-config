@@ -38,11 +38,20 @@ bash "$REPO_DIR/vfox/install.sh"
 echo "==> Linking fish config..."
 mkdir -p ~/.config/fish
 ln -sf "$REPO_DIR/fish/config.fish" ~/.config/fish/config.fish
-[ -L ~/.config/fish/config.fish ] && echo "    ~/.config/fish/config.fish -> $REPO_DIR/fish/config.fish" || echo "    ERROR: failed to create symlink"
+if [ -L ~/.config/fish/config.fish ]; then
+    echo "    ~/.config/fish/config.fish -> $REPO_DIR/fish/config.fish"
+    grep -q 'set -g fish_greeting' ~/.config/fish/config.fish && echo "    fish_greeting: disabled" || echo "    WARN: fish_greeting not set"
+else
+    echo "    ERROR: failed to create symlink"
+fi
 
 echo "==> Linking starship config..."
 ln -sf "$REPO_DIR/starship.toml" ~/.config/starship.toml
-[ -L ~/.config/starship.toml ] && echo "    ~/.config/starship.toml -> $REPO_DIR/starship.toml" || echo "    ERROR: failed to create symlink"
+if [ -L ~/.config/starship.toml ]; then
+    echo "    ~/.config/starship.toml -> $REPO_DIR/starship.toml"
+else
+    echo "    ERROR: failed to create symlink"
+fi
 
 echo ""
 echo "==> Installation complete!"
