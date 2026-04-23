@@ -25,18 +25,28 @@ fi
 
 echo "==> Installing vfox..."
 if [ ! -d "$REPO_DIR/vfox" ]; then
+    echo "    Cloning vfox repo..."
     git clone https://github.com/version-fox/vfox.git "$REPO_DIR/vfox"
 fi
+if [ ! -f "$REPO_DIR/vfox/install.sh" ]; then
+    echo "    ERROR: install.sh not found. Remove vfox directory and retry."
+    exit 1
+fi
+echo "    Running vfox install.sh..."
 bash "$REPO_DIR/vfox/install.sh"
 
 echo "==> Linking fish config..."
 mkdir -p ~/.config/fish
 ln -sf "$REPO_DIR/fish/config.fish" ~/.config/fish/config.fish
+[ -L ~/.config/fish/config.fish ] && echo "    ~/.config/fish/config.fish -> $REPO_DIR/fish/config.fish" || echo "    ERROR: failed to create symlink"
 
 echo "==> Linking starship config..."
 ln -sf "$REPO_DIR/starship.toml" ~/.config/starship.toml
+[ -L ~/.config/starship.toml ] && echo "    ~/.config/starship.toml -> $REPO_DIR/starship.toml" || echo "    ERROR: failed to create symlink"
 
 echo ""
 echo "==> Installation complete!"
 echo "    Restart your shell or run: fish"
 echo "    To set fish as your default shell: chsh -s /usr/bin/fish"
+echo ""
+echo "    Note: To update vfox later, run: cd $REPO_DIR/vfox && git pull"
