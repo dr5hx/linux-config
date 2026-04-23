@@ -23,6 +23,12 @@ else
     exit 1
 fi
 
+echo "==> Installing vfox..."
+if [ ! -d "$REPO_DIR/vfox" ]; then
+    git clone https://github.com/version-fox/vfox.git "$REPO_DIR/vfox"
+fi
+bash "$REPO_DIR/vfox/install.sh"
+
 echo "==> Linking fish config..."
 mkdir -p ~/.config/fish
 ln -sf "$REPO_DIR/fish/config.fish" ~/.config/fish/config.fish
