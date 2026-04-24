@@ -138,7 +138,7 @@ format = '[$symbol$environment]($style)'
 ignore_base = false
 
 [time]
-disabled = false
+disabled = true
 format = '[$symbol $time]($style)'
 style = "bg:mauve fg:crust"
 time_format = "%Y-%m-%d %H:%M:%S"
