@@ -22,7 +22,8 @@ $nodejs\
 $python\
 $java\
 $rust\
-$golang"""
+$golang\
+$time"""
 
 palette = 'catppuccin_mocha'
 
@@ -137,7 +138,11 @@ format = '[$symbol$environment]($style)'
 ignore_base = false
 
 [time]
-disabled = true
+disabled = false
+format = '[$symbol $time]($style)'
+style = "bg:mauve fg:crust"
+time_format = "%Y-%m-%d %H:%M:%S"
+symbol = "🕐 "
 
 [line_break]
 disabled = false
