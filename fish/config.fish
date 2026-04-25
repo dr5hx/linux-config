@@ -4,8 +4,9 @@
 # Disable welcome message
 set -g fish_greeting
 
+# vfox version manager activation
+vfox activate fish | source
+
 # Starship prompt initialization
 starship init fish | source
 
-# vfox version manager activation
-vfox activate fish | source
